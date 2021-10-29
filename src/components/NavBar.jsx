@@ -11,7 +11,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import logo from '../MYDESIGN_logo.svg';
+//import logo from '../MYDESIGN_logo.svg';
+import CartWidget from './navbar/CartWidget';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -148,7 +149,7 @@ export default function NavBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
+            sx={{ display: { xs: 'block', sm: 'block' } }}
           >
             MyDesign
           </Typography>
@@ -160,7 +161,7 @@ export default function NavBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Buscar…"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
@@ -174,7 +175,7 @@ export default function NavBar() {
           <MenuItem>
             <p>Stickers</p>
           </MenuItem>
-          
+          <CartWidget/>
             <IconButton
               size="large"
               edge="end"
@@ -188,6 +189,7 @@ export default function NavBar() {
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <CartWidget/>
             <IconButton
               size="large"
               aria-label="show more"
